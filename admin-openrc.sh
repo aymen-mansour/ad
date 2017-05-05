@@ -15,8 +15,8 @@ export OS_AUTH_URL=http://10.0.2.15/identity
 
 # With the addition of Keystone we have standardized on the term **tenant**
 # as the entity that owns the resources.
-export OS_TENANT_ID=c004c44f05bc406fa82686e1b3e47d6a
-export OS_TENANT_NAME="demo"
+export OS_TENANT_ID=ba4dc4f301ef44cba382ccea887b28ce
+export OS_TENANT_NAME="admin"
 
 # unsetting v3 items in case set
 unset OS_PROJECT_ID
