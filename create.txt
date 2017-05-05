@@ -1,0 +1,36 @@
+
+
+
+openstack service create --name SERVICE_NAME --description SERVICE_DESCRIPTION SERVICE_TYPE:
+
+openstack service create --name swift --description "object store service" object-store
+
+
+
+
+
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | object store service             |
+| enabled     | True                             |
+| id          | 071922a568204fe89c34c4a0c55a6dd8 |
+| name        | swift                            |
+| type        | object-store                     |
++-------------+----------------------------------+
+
+
+
+openstack endpoint create --region RegionOne 071922a568204fe89c34c4a0c55a6dd8 public http://10.0.2.15:8774/v2
+openstack endpoint create --region RegionOne 071922a568204fe89c34c4a0c55a6dd8 internal http://10.0.2.15:8774/v2
+openstack endpoint create --region RegionOne 071922a568204fe89c34c4a0c55a6dd8 admin http://10.0.2.15:8774/v2
+
+
+
+
+openstack service delete object-store
+openstack service show object-store
+
+
+openstack endpoint list
+openstack container list
